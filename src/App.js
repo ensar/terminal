@@ -1,13 +1,14 @@
-function App() {
+import { ThemeProvider } from '@mui/material';
+import { RouterProvider } from 'react-router-dom';
+import { router } from 'routes';
+import { theme } from 'theme';
+
+const App = () => {
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <RouterProvider router={router} />
+    </ThemeProvider>
   );
-}
+};
 
 export default App;
