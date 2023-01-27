@@ -38,7 +38,7 @@ const Terminal = ({ terminal }) => {
             >
               <Button
                 key={i}
-                href={`/terminals/${terminal.depCode}/${t.filterCode}`}
+                href={`/terminal/${terminal.depCode}/${t.filterCode}`}
                 sx={{
                   position: 'relative',
                   border: '1px solid',
