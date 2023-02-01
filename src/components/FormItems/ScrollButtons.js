@@ -3,28 +3,26 @@ import { Box, Button } from '@mui/material';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
-const ScrollButtons = () => {
+const ScrollButtons = ({ elmClass }) => {
   const [btnPos, setBtnPos] = useState(0);
 
   const scrollTheElement = (pos) => {
-    const selectElm = document.querySelector('.MuiPaper-root.MuiMenu-paper');
+    const selectElm = document.querySelector(elmClass);
     selectElm.scrollBy(0, pos);
   };
 
   useEffect(() => {
-    const selectElm = document.querySelector(
-      '.css-1ualgfl-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root'
-    );
+    const selectElm = document.querySelector(elmClass);
     const pos = selectElm.offsetLeft + selectElm.offsetWidth;
     setBtnPos(pos);
 
     function updateSize() {
-      setBtnPos(pos + selectElm.offsetWidth);
+      setBtnPos(pos);
     }
 
     window.addEventListener('resize', updateSize);
     return () => window.removeEventListener('resize', updateSize);
-  }, [btnPos]);
+  }, [elmClass, btnPos]);
 
   return (
     <Box

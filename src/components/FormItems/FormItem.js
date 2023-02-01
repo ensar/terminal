@@ -1,7 +1,7 @@
 import { Grid, TextField, Typography } from '@mui/material';
 import { useEffect, useState } from 'react';
 import { getFilters } from 'services/api';
-import SelectItem from './SelectItem';
+import SelectFilter from './SelectFilter';
 
 const FormItem = ({ item, formik }) => {
   const [filters, setFilters] = useState();
@@ -34,7 +34,7 @@ const FormItem = ({ item, formik }) => {
             error={formik.errors[name] ? true : false}
           />
         ) : (
-          <SelectItem name={name} formik={formik} data={filters} />
+          <SelectFilter name={name} formik={formik} data={filters} />
         )}
       </Grid>
     </>

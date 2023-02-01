@@ -77,7 +77,7 @@ const LoginForm = () => {
           </Grid>
         </Grid>
       </form>
-      <Grid item xs={8} sx={{ marginTop: '10px', marginInline: 'auto' }}>
+      <Grid item xs={11} sx={{ marginTop: '10px', marginInline: 'auto' }}>
         <VirtualKeyboard formik={formik} />
       </Grid>
     </Grid>
