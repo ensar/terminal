@@ -6,5 +6,15 @@
   },
   "termtitle": "TÜM TERMİNALLER",
   "termSubTitle1": "BÖLÜM BAZINDA",
-  "termSubTitle2": "FİLTRE BAZINDA"
+  "termSubTitle2": "FİLTRE BAZINDA",
+  "form": {
+    "filterLabel": "Terminal Listesi",
+    "registerLabel": "Sicil No",
+    "passwordLabel": "Şifre",
+    "assyLabel": "Montaj No",
+    "shiftLabel1": "Tarih",
+    "shiftLabel2": "Vardiya",
+    "login": "GİRİŞ YAP",
+    "close": "KAPAT"
+  }
 }

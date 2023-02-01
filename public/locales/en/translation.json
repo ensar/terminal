@@ -6,5 +6,15 @@
   },
   "termtitle": "ALL TERMINALS",
   "termSubTitle1": "DEPARTMENT BASED",
-  "termSubTitle2": "FILTER BASED"
+  "termSubTitle2": "FILTER BASED",
+  "form": {
+    "filterLabel": "Terminal List",
+    "registerLabel": "Register No",
+    "passwordLabel": "Password",
+    "assyLabel": "Assy No",
+    "shiftLabel1": "Date",
+    "shiftLabel2": "Shift",
+    "login": "LOGIN",
+    "close": "CLOSE"
+  }
 }

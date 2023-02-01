@@ -6,5 +6,15 @@
   },
   "termtitle": "TOUS LES TERMINAUX",
   "termSubTitle1": "BASÉ SUR LE DÉPARTEMENT",
-  "termSubTitle2": "SUR BASE DE FILTRE"
+  "termSubTitle2": "SUR BASE DE FILTRE",
+  "form": {
+    "filterLabel": "Liste des terminaux",
+    "registerLabel": "Numéro d'enregistrement",
+    "passwordLabel": "Mot de passe",
+    "assyLabel": "montage non",
+    "shiftLabel1": "Date",
+    "shiftLabel2": "Décalage",
+    "login": "CONNEXION",
+    "close": "FERMER"
+  }
 }
