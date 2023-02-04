@@ -16,5 +16,27 @@
     "shiftLabel2": "Shift",
     "login": "LOGIN",
     "close": "CLOSE"
+  },
+  "table": {
+    "depCode": "Dep",
+    "bodyNo": "Body",
+    "assyNo": "Assy",
+    "vinNo": "Vin No",
+    "colorExtCode": "Color",
+    "modelCode": "Mdl",
+    "localId": "Local",
+    "partName": "Part",
+    "spotCode": "Spot",
+    "arcnutboltCode1": "Gun",
+    "arcnutboltCode2": "Arc",
+    "arcnutboltCode3": "AssArcGuny",
+    "defectName": "Defect",
+    "defRankCode": "Rank",
+    "formattedDefectHour": "Hour",
+    "defectType": "Type",
+    "defrespName": "Defect Res",
+    "arcnutboltCode4": "Sub-responsible",
+    "save": "Save",
+    "operation": "Operation"
   }
 }

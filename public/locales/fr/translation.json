@@ -16,5 +16,27 @@
     "shiftLabel2": "Décalage",
     "login": "CONNEXION",
     "close": "FERMER"
+  },
+  "table": {
+    "depCode": "Dép",
+    "bodyNo": "Body",
+    "assyNo": "Assy",
+    "vinNo": "Vin No",
+    "colorExtCode": "Couleur",
+    "modelCode": "Mdl",
+    "localId": "Local",
+    "partName": "Partie",
+    "spotCode": "Spot",
+    "arcnutboltCode1": "Gun",
+    "arcnutboltCode2": "Arc",
+    "arcnutboltCode3": "AssArcGuny",
+    "defectName": "Défaut",
+    "defRankCode": "Rank",
+    "formattedDefectHour": "Heure",
+    "defectType": "Taper",
+    "defrespName": "Défaut Res",
+    "arcnutboltCode4": "Sous-responsable",
+    "save": "Sauvegarder",
+    "operation": "Opération"
   }
 }

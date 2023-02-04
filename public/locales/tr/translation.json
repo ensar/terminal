@@ -16,5 +16,27 @@
     "shiftLabel2": "Vardiya",
     "login": "GİRİŞ YAP",
     "close": "KAPAT"
+  },
+  "table": {
+    "depCode": "Bildiren",
+    "bodyNo": "Body",
+    "assyNo": "Assy",
+    "vinNo": "Vin No",
+    "colorExtCode": "Renk",
+    "modelCode": "Mdl",
+    "localId": "Sicil",
+    "partName": "Parça",
+    "spotCode": "Spot",
+    "arcnutboltCode1": "Gun",
+    "arcnutboltCode2": "Arc",
+    "arcnutboltCode3": "AssArcGuny",
+    "defectName": "Hata",
+    "defRankCode": "Rank",
+    "formattedDefectHour": "Saat",
+    "defectType": "Türü",
+    "defrespName": "Hata",
+    "arcnutboltCode4": "Alt Sorumlu",
+    "save": "Kaydet",
+    "operation": "İşlem"
   }
 }
