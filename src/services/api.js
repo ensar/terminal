@@ -14,3 +14,8 @@ export const getShifts = async () => {
   const res = await axios.get(process.env.REACT_APP_SHIFTS_URL);
   return res.data;
 };
+
+export const getDefects = async () => {
+  const res = await axios.get(process.env.REACT_APP_DEFECTS_URL);
+  return res.data;
+};

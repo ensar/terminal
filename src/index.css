@@ -12,3 +12,9 @@ body {
 h6{
   color:#D41922
 }
+
+tr td{
+  border-right: 1px solid !important;
+  border-bottom: 1px solid !important;
+}
+

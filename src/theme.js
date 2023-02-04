@@ -1,6 +1,21 @@
 import { createTheme } from '@mui/material';
 
 export const theme = createTheme({
+  components: {
+    MuiTableHead: {
+      styleOverrides: {
+        root: {
+          '& th': {
+            backgroundColor: '#C6FFC8',
+            borderRight: '1px solid',
+            padding: '10px',
+            fontWeight: '600',
+            textAlign: 'center',
+          },
+        },
+      },
+    },
+  },
   palette: {
     main: {
       white: '#fff',
