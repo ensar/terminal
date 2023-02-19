@@ -1,5 +1,5 @@
-import { Grid, Typography } from '@mui/material';
-import { useRouteError } from 'react-router-dom';
+import { Button, Grid, Typography } from '@mui/material';
+import { Link, useRouteError } from 'react-router-dom';
 
 export default function ErrorPage() {
   const error = useRouteError();
@@ -26,6 +26,9 @@ export default function ErrorPage() {
       <Typography variant='body2'>
         <i>{error.statusText || error.message}</i>
       </Typography>
+      <Button LinkComponent={Link} to='/' variant='contained' color='success'>
+        BACK TO HOME
+      </Button>
     </Grid>
   );
 }
