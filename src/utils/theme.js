@@ -15,6 +15,15 @@ export const theme = createTheme({
         },
       },
     },
+    MuiPopover: {
+      styleOverrides: {
+        paper: {
+          width: '250',
+          maxHeight: '300px',
+          backgroundColor: '#C6FFC8',
+        },
+      },
+    },
   },
   palette: {
     main: {

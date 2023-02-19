@@ -1,13 +1,16 @@
 import { Grid, Button } from '@mui/material';
 import { useFormik } from 'formik';
-import { validationSchema } from 'utils/validation';
+import { loginSchema } from 'utils/validation';
 import FormItem from './FormItems/FormItem';
 import VirtualKeyboard from './FormItems/VirtualKeyboard';
 import Shift from './FormItems/Shift';
 import { useTranslation } from 'react-i18next';
+import { useNavigate, useParams } from 'react-router-dom';
 
 const LoginForm = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
+  const { depCode, filterCode } = useParams();
 
   const formItems = [
     { name: 'filter', type: 'select', label: t('form.filterLabel') },
@@ -28,9 +31,12 @@ const LoginForm = () => {
         shiftCode: 'B',
       },
     },
-    validationSchema,
+    validationSchema: loginSchema,
     onSubmit: (values) => {
       console.log(values);
+      navigate(
+        `/terminal/defectentry/${depCode}/${filterCode}/${values.filter}`
+      );
     },
   });
 

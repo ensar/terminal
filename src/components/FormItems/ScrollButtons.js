@@ -3,7 +3,7 @@ import { Box, Button } from '@mui/material';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
-const ScrollButtons = ({ elmClass }) => {
+const ScrollButtons = ({ elmClass = '.MuiPaper-root.MuiMenu-paper' }) => {
   const [btnPos, setBtnPos] = useState(0);
 
   const scrollTheElement = (pos) => {
@@ -29,7 +29,6 @@ const ScrollButtons = ({ elmClass }) => {
       sx={{
         width: '100px',
         height: '50px',
-        background: 'red',
         position: 'fixed',
         left: `${btnPos}px`,
       }}

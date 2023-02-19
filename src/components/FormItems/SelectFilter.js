@@ -1,8 +1,17 @@
 import { MenuItem, Select } from '@mui/material';
+import { useEffect, useState } from 'react';
+import { getFilters } from 'services/api';
 import ScrollButtons from './ScrollButtons';
 
-const SelectFilter = (props) => {
-  const { name, formik, data } = props;
+const SelectFilter = ({ name, formik }) => {
+  const [data, setData] = useState();
+
+  useEffect(() => {
+    (async () => {
+      const res = await getFilters();
+      setData(res.data);
+    })();
+  }, []);
   return (
     <Select
       name={name}
@@ -11,7 +20,7 @@ const SelectFilter = (props) => {
       onChange={formik.handleChange}
       value={formik.values[name]}
     >
-      <ScrollButtons elmClass={'.MuiPaper-root.MuiMenu-paper'} />
+      <ScrollButtons />
       {data &&
         data.map((filter) => {
           return (

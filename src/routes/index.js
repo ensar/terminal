@@ -3,6 +3,7 @@ import Terminals from 'pages/Terminals';
 import ErrorPage from 'pages/ErrorPage';
 import TerminalLogin from 'pages/TerminalLogin';
 import DefectList from 'pages/DefectList';
+import DefectEntry from 'pages/DefectEntry';
 
 export const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ export const router = createBrowserRouter([
       {
         path: '/terminal/defects',
         element: <DefectList />,
+      },
+      {
+        path: '/terminal/defectentry/:depCode/:filterCode/:termId',
+        element: <DefectEntry />,
       },
     ],
   },

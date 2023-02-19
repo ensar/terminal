@@ -9,8 +9,10 @@ const VirtualKeyboard = ({ formik }) => {
   const [layoutName, setLayoutName] = useState('default');
 
   useEffect(() => {
-    window.addEventListener('focusin', (e) => {
-      setName(e.target.name);
+    window.addEventListener('click', (e) => {
+      if (e.target.type === 'text' || e.target.type === 'password') {
+        setName(e.target.name);
+      }
     });
   }, []);
 
@@ -23,7 +25,7 @@ const VirtualKeyboard = ({ formik }) => {
     if (btn === '{bksp}') {
       formik.setFieldValue(name, formik.values[name]?.slice(0, -1));
     }
-    if (btn === '{lock}' || '{shift}') {
+    if (btn === '{lock}' || btn === '{shift}') {
       layoutName === 'default'
         ? setLayoutName('shift')
         : setLayoutName('default');

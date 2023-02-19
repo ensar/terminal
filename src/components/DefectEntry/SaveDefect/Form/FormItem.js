@@ -1,35 +1,31 @@
 import { Grid, TextField, Typography } from '@mui/material';
-import SelectFilter from './SelectFilter';
+import SelectItem from './SelectItem';
 
-const FormItem = ({ item, formik }) => {
-  const { name } = item;
+const FormItem = ({ item, formik, data }) => {
+  const name = item.englishUserName.split(' ').join('');
 
   return (
     <>
       <Grid item xs={4}>
         <Typography variant='body1' sx={{ color: '#000', fontWeight: 500 }}>
-          {item.label}
+          {item.englishUserName}
         </Typography>
       </Grid>
       <Grid item xs={8}>
-        {item.type !== 'select' ? (
+        {item.controlType === 'TXA' ? (
           <TextField
             variant='outlined'
-            type={item.type}
             name={name}
             fullWidth
-            margin='dense'
+            sx={{ marginBlock: '2px', backgroundColor: '#fff' }}
             onChange={formik.handleChange}
             value={formik.values[name]}
-            helperText={formik.errors[name] && formik.errors[name]}
-            error={formik.errors[name] ? true : false}
           />
         ) : (
-          <SelectFilter name={name} formik={formik} />
+          <SelectItem name={name} formik={formik} item={item} data={data} />
         )}
       </Grid>
     </>
   );
 };
-
 export default FormItem;
