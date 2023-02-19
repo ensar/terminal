@@ -11,7 +11,7 @@
     "filterLabel": "Liste des terminaux",
     "registerLabel": "Numéro d'enregistrement",
     "passwordLabel": "Mot de passe",
-    "assyLabel": "montage non",
+    "assyLabel": "montage no",
     "shiftLabel1": "Date",
     "shiftLabel2": "Décalage",
     "login": "CONNEXION",
@@ -38,5 +38,26 @@
     "arcnutboltCode4": "Sous-responsable",
     "save": "Sauvegarder",
     "operation": "Opération"
+  },
+  "defectEntry": {
+    "assy": "Montage No",
+    "body": "Body No",
+    "title": "ÉCRAN DE SAISIE DES DÉFAUTS",
+    "color": "Couleur",
+    "btn1": "SAUVEGARDE RAPIDE",
+    "btn2": "ENREGISTRER ET PASSER",
+    "btn3": "ENTRÉE DE DÉFAUT",
+    "btn4": "RECHERCHE",
+    "btn5": "PREMIÈRE IMAGE DE LA BORNE",
+    "btn6": "DÉFAUT FRÉQUENT",
+    "btn7": "SORTIE",
+    "btn8": "MODÈLE PREMIÈRE IMAGE",
+    "btn9": "DOS",
+    "btn10": "LISTE DES DÉFAUTS",
+    "btn11": "CLAIR",
+    "btn12": "GRANDE POLICE",
+    "btn13": "SAUVEGARDER",
+    "btn14": "ANNULER",
+    "support": "SOUTIEN TECHNIQUE"
   }
 }

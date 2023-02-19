@@ -38,5 +38,26 @@
     "arcnutboltCode4": "Sub-responsible",
     "save": "Save",
     "operation": "Operation"
+  },
+  "defectEntry": {
+    "assy": "Assy No",
+    "body": "Body No",
+    "title": "DEFECT ENTRY SCREEN",
+    "color": "Color",
+    "btn1": "QUICK SAVE",
+    "btn2": "SAVE AND PASS",
+    "btn3": "DEFECT ENTRY",
+    "btn4": "SEARCH",
+    "btn5": "TERMINAL FIRST IMAGE",
+    "btn6": "FREQUENT DEFECT",
+    "btn7": "EXIT",
+    "btn8": "MODEL FIRST IMAGE",
+    "btn9": "BACK",
+    "btn10": "DEFECT LIST",
+    "btn11": "CLEAR",
+    "btn12": "LARGE FONT",
+    "btn13": "SAVE",
+    "btn14": "CANCEL",
+    "support": "TECHNICAL SUPPORT"
   }
 }

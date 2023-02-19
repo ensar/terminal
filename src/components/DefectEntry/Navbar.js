@@ -2,9 +2,11 @@ import { useEffect, useState } from 'react';
 import { Box, Grid, Typography } from '@mui/material';
 import { getHeaderData } from 'services/api';
 import { useDefectEntryContext } from 'contexts/DefectEntryContext';
+import { useTranslation } from 'react-i18next';
 
 const Navbar = () => {
   const [headerData, setHeaderData] = useState();
+  const { t } = useTranslation();
   const { setAssyNo } = useDefectEntryContext();
 
   useEffect(() => {
@@ -40,7 +42,7 @@ const Navbar = () => {
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
               <Box sx={{ textAlign: 'center' }}>
                 <Typography variant='body1' sx={{ fontWeight: '400' }}>
-                  MONTAJ NO
+                  {t('defectEntry.assy')}
                 </Typography>
                 <Typography variant='body1' sx={{ fontWeight: '500' }}>
                   {headerData.assyNo}
@@ -57,7 +59,7 @@ const Navbar = () => {
                 }}
               >
                 <Typography variant='body1' sx={{ fontWeight: '400' }}>
-                  BODY NO
+                  {t('defectEntry.body')}
                 </Typography>
                 <Typography variant='body1' sx={{ fontWeight: '500' }}>
                   {headerData.bodyNo}
@@ -67,7 +69,7 @@ const Navbar = () => {
                 variant='h5'
                 sx={{ marginLeft: '10px', fontWeight: '500', color: '#677133' }}
               >
-                HATA GİRİŞ EKRANI
+                {t('defectEntry.title')}
               </Typography>
             </Box>
             <Box
@@ -82,7 +84,7 @@ const Navbar = () => {
               }}
             >
               <Typography variant='body1' sx={{ fontWeight: '400' }}>
-                Renk
+                {t('defectEntry.color')}
               </Typography>
               <Typography variant='body1' sx={{ fontWeight: '500' }}>
                 {headerData.extCode}

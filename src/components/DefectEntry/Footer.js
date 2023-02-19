@@ -1,29 +1,31 @@
 import { Box, Button, Grid, Typography } from '@mui/material';
 import { useDefectEntryContext } from 'contexts/DefectEntryContext';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
   const { defect, labelText } = useDefectEntryContext();
+  const { t } = useTranslation();
   return (
     <>
       <Grid container xs={12} sx={{ padding: '10px 5px' }}>
         <Grid item xs={9}>
           <Button variant='outlined' sx={buttonStyles}>
-            ÇIKIŞ
+            {t('defectEntry.btn7')}
           </Button>
           <Button variant='outlined' sx={buttonStyles}>
-            MODEL İLK RESMİ
+            {t('defectEntry.btn8')}
           </Button>
           <Button variant='outlined' sx={buttonStyles}>
-            GERİ
+            {t('defectEntry.btn9')}
           </Button>
           <Button variant='outlined' sx={buttonStyles}>
-            HATA LİSTESİ
+            {t('defectEntry.btn10')}
           </Button>
           <Button variant='outlined' sx={buttonStyles}>
-            TEMİZLE
+            {t('defectEntry.btn11')}
           </Button>
           <Button variant='outlined' sx={buttonStyles}>
-            BÜYÜK FONT
+            {t('defectEntry.btn12')}
           </Button>
         </Grid>
         <Grid item xs={3}>
@@ -48,7 +50,7 @@ const Footer = () => {
             variant='body2'
             sx={{ color: 'main.darkRed', marginRight: '5px' }}
           >
-            TEKNİK DESTEK
+            {t('defectEntry.support')}
           </Typography>
           <Typography variant='body2'>CVQS (TMTT)</Typography>
         </Box>

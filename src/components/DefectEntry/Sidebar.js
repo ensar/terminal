@@ -2,10 +2,12 @@ import { Button, FormGroup, Grid, TextField, Typography } from '@mui/material';
 import CheckBox from 'components/FormItems/CheckBox';
 import { useDefectEntryContext } from 'contexts/DefectEntryContext';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import SaveDefect from './SaveDefect';
 
 const Sidebar = () => {
   const { assyNo, defect } = useDefectEntryContext();
+  const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   return (
     <Grid item xs={3} sx={{ padding: '5px' }}>
@@ -16,10 +18,10 @@ const Sidebar = () => {
         <CheckBox label='RDD' />
       </FormGroup>
       <Button variant='outlined' sx={buttonStyles} disabled>
-        HIZLI KAYDET
+        {t('defectEntry.btn1')}
       </Button>
       <Button variant='outlined' sx={buttonStyles} disabled>
-        KAYDET VE GEÇ
+        {t('defectEntry.btn2')}
       </Button>
       <Button
         variant='outlined'
@@ -27,11 +29,11 @@ const Sidebar = () => {
         disabled={!Boolean(defect)}
         onClick={() => setOpen(true)}
       >
-        HATA KAYIT
+        {t('defectEntry.btn3')}
       </Button>
       <SaveDefect open={open} setOpen={setOpen} />
       <Typography variant='h6' color={'black'} textAlign={'center'}>
-        MONTAJ NO
+        {t('defectEntry.assy').toUpperCase()}
       </Typography>
       <TextField
         sx={{
@@ -45,13 +47,13 @@ const Sidebar = () => {
         value={assyNo || ''}
       />
       <Button variant='outlined' sx={buttonStyles}>
-        ARA
+        {t('defectEntry.btn4')}
       </Button>
       <Button variant='outlined' sx={buttonStyles}>
-        TERMİNAL İLK RESMİ
+        {t('defectEntry.btn5')}
       </Button>
       <Button variant='outlined' sx={buttonStyles}>
-        SIK GELEN HATA
+        {t('defectEntry.btn6')}
       </Button>
       <Button variant='outlined' sx={buttonStyles}>
         MANİFEST

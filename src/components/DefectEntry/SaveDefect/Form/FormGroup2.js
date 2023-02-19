@@ -2,9 +2,11 @@ import { useEffect, useState } from 'react';
 import { Button, Grid, MenuItem, Select } from '@mui/material';
 import CheckBox from 'components/FormItems/CheckBox';
 import { getnrReason } from 'services/api';
+import { useTranslation } from 'react-i18next';
 
 const FormGroup2 = ({ formik, setOpen }) => {
   const [data, setData] = useState();
+  const { t } = useTranslation();
 
   useEffect(() => {
     (async () => {
@@ -45,7 +47,7 @@ const FormGroup2 = ({ formik, setOpen }) => {
       </Grid>
       <Grid item xs={5}>
         <Button type='submit' variant='contained' color='error' fullWidth>
-          KAYDET
+          {t('defectEntry.btn13')}
         </Button>
       </Grid>
       <Grid item xs={5}>
@@ -55,7 +57,7 @@ const FormGroup2 = ({ formik, setOpen }) => {
           fullWidth
           onClick={() => setOpen(false)}
         >
-          İPTAL
+          {t('defectEntry.btn14')}
         </Button>
       </Grid>
     </Grid>

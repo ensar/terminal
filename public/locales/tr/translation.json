@@ -38,5 +38,26 @@
     "arcnutboltCode4": "Alt Sorumlu",
     "save": "Kaydet",
     "operation": "İşlem"
+  },
+  "defectEntry": {
+    "assy": "Montaj No",
+    "body": "Body No",
+    "title": "HATA GİRİŞ EKRANI",
+    "color": "Renk",
+    "btn1": "HIZLI KAYDET",
+    "btn2": "KAYDET VE GEÇ",
+    "btn3": "HATA KAYIT",
+    "btn4": "ARA",
+    "btn5": "TERMİNAL İLK RESMİ",
+    "btn6": "SIK GELEN HATA",
+    "btn7": "ÇIKIŞ",
+    "btn8": "MODEL İLK RESMİ",
+    "btn9": "GERİ",
+    "btn10": "HATA LİSTESİ",
+    "btn11": "TEMİZLE",
+    "btn12": "BÜYÜK FONT",
+    "btn13": "KAYDET",
+    "btn14": "İPTAL",
+    "support": "TEKNİK DESTEK"
   }
 }
