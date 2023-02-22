@@ -3,12 +3,15 @@ import CheckBox from 'components/FormItems/CheckBox';
 import { useDefectEntryContext } from 'contexts/DefectEntryContext';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 import SaveDefect from './SaveDefect';
 
 const Sidebar = () => {
   const { assyNo, defect } = useDefectEntryContext();
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const [open, setOpen] = useState(false);
+
   return (
     <Grid item xs={3} sx={{ padding: '5px' }}>
       <FormGroup
@@ -49,7 +52,7 @@ const Sidebar = () => {
       <Button variant='outlined' sx={buttonStyles}>
         {t('defectEntry.btn4')}
       </Button>
-      <Button variant='outlined' sx={buttonStyles}>
+      <Button variant='outlined' sx={buttonStyles} onClick={() => navigate(0)}>
         {t('defectEntry.btn5')}
       </Button>
       <Button variant='outlined' sx={buttonStyles}>

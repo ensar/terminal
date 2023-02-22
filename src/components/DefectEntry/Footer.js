@@ -1,10 +1,12 @@
 import { Box, Button, Grid, Typography } from '@mui/material';
 import { useDefectEntryContext } from 'contexts/DefectEntryContext';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 
 const Footer = () => {
   const { defect, labelText } = useDefectEntryContext();
   const { t } = useTranslation();
+  const navigate = useNavigate();
   return (
     <>
       <Grid container xs={12} sx={{ padding: '10px 5px' }}>
@@ -18,7 +20,11 @@ const Footer = () => {
           <Button variant='outlined' sx={buttonStyles}>
             {t('defectEntry.btn9')}
           </Button>
-          <Button variant='outlined' sx={buttonStyles}>
+          <Button
+            variant='outlined'
+            sx={buttonStyles}
+            onClick={() => navigate('/terminal/defects')}
+          >
             {t('defectEntry.btn10')}
           </Button>
           <Button variant='outlined' sx={buttonStyles}>
