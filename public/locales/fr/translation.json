@@ -59,5 +59,9 @@
     "btn13": "SAUVEGARDER",
     "btn14": "ANNULER",
     "support": "SOUTIEN TECHNIQUE"
+  },
+  "toastMessages": {
+    "success": "Complété avec succès!",
+    "error": "Quelque chose s'est mal passé."
   }
 }

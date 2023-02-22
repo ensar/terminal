@@ -59,5 +59,9 @@
     "btn13": "SAVE",
     "btn14": "CANCEL",
     "support": "TECHNICAL SUPPORT"
+  },
+  "toastMessages": {
+    "success": "Completed successfully!",
+    "error": "Something went wrong."
   }
 }

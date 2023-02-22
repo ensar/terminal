@@ -59,5 +59,9 @@
     "btn13": "KAYDET",
     "btn14": "İPTAL",
     "support": "TEKNİK DESTEK"
+  },
+  "toastMessages": {
+    "success": "İşlem Başarılı!",
+    "error": "Bir şeyler ters gitti."
   }
 }

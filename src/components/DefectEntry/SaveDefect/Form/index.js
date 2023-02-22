@@ -1,5 +1,6 @@
 import { Grid } from '@mui/material';
 import { useDefectEntryContext } from 'contexts/DefectEntryContext';
+import { useToastContext } from 'contexts/ToastContext';
 import { useFormik } from 'formik';
 import FormGroup1 from './FormGroup1';
 import FormGroup2 from './FormGroup2';
@@ -7,6 +8,8 @@ import VirtualKeyboard from 'components/FormItems/VirtualKeyboard';
 
 const Form = ({ setOpen }) => {
   const { pointerCor } = useDefectEntryContext();
+  const { setShow } = useToastContext();
+
   const formik = useFormik({
     initialValues: {
       ExitDepartment: '',
@@ -22,6 +25,7 @@ const Form = ({ setOpen }) => {
     onSubmit: (values) => {
       console.log(values);
       setOpen(false);
+      setShow(true);
     },
   });
   return (

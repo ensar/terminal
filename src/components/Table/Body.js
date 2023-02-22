@@ -9,8 +9,10 @@ import {
   MenuItem,
 } from '@mui/material';
 import { Save, Edit, Delete } from '@mui/icons-material';
+import { useToastContext } from 'contexts/ToastContext';
 
 const Body = ({ data, columns, setData }) => {
+  const { setShow } = useToastContext();
   const findSelected = (id) => {
     return data[0]?.nrReasonList.find((n) => n.nrId === id);
   };
@@ -22,6 +24,7 @@ const Body = ({ data, columns, setData }) => {
         defectList: data[0].defectList.filter((d) => d.vinNo !== id),
       },
     ]);
+    setShow(true);
   };
 
   return (
