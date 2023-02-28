@@ -29,15 +29,15 @@ const Terminal = ({ terminal }) => {
           paddingInline: '10px',
         }}
       >
-        {terminal.filterBaseds.map((t, i) => {
+        {terminal.filterBaseds.map((t) => {
           return (
             <Tooltip
+              key={t.termName}
               title={`${t.userDesc} - ${t.termName}`}
               placement='bottom'
               arrow
             >
               <Button
-                key={i}
                 href={`/terminal/${terminal.depCode}/${t.filterCode}`}
                 sx={{
                   position: 'relative',

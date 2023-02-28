@@ -7,30 +7,35 @@ import {
   Select,
   FormControl,
   MenuItem,
+  Box,
 } from '@mui/material';
 import { Save, Edit, Delete } from '@mui/icons-material';
 import { useToastContext } from 'contexts/ToastContext';
+import { useState } from 'react';
+import useLazyLoading from 'hooks/useLazyLoading';
 
 const Body = ({ data, columns, setData }) => {
   const { setShow } = useToastContext();
+  const [defects, setDefects] = useState([]);
+
+  const { loader, hasMore } = useLazyLoading(
+    data[0]?.defectList,
+    defects,
+    setDefects
+  );
+
   const findSelected = (id) => {
     return data[0]?.nrReasonList.find((n) => n.nrId === id);
   };
 
   const deleteDefect = (id) => {
-    setData([
-      {
-        ...data[0],
-        defectList: data[0].defectList.filter((d) => d.vinNo !== id),
-      },
-    ]);
+    setDefects(defects.filter((d) => d.vinNo !== id));
     setShow(true);
   };
-
   return (
     <TableBody>
       {data &&
-        data[0]?.defectList.map((row, i) => {
+        defects?.map((row, i) => {
           return (
             <TableRow hover tabIndex={-1} key={i}>
               {columns.map((column, i) => {
@@ -115,6 +120,11 @@ const Body = ({ data, columns, setData }) => {
             </TableRow>
           );
         })}
+      {hasMore || defects.length === 0 ? (
+        <Box ref={loader} sx={{ fontSize: '22px', paddingBottom: '60px' }}>
+          Loading...
+        </Box>
+      ) : null}
     </TableBody>
   );
 };

@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
-import { Grid, Skeleton, Typography } from '@mui/material';
+import { Grid, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { getTerminals } from 'services/api';
 import Terminal from './Terminal';
+import TerminalLoading from './Skeletons/TerminalLoading';
 
 const TerminalLists = () => {
   const [terminals, setTerminals] = useState();
@@ -42,41 +43,7 @@ const TerminalLists = () => {
           return <Terminal terminal={t} key={t.depCode} />;
         })}
 
-      {!terminals &&
-        [...Array(8).keys()].map((i) => {
-          return (
-            <>
-              <Grid
-                xs={3}
-                sx={{ border: '1px solid', borderColor: 'main.darkGreen' }}
-              >
-                <Skeleton variant='rectangular' animation='wave' height={50} />
-              </Grid>
-              <Grid
-                xs={9}
-                sx={{
-                  border: '1px solid',
-                  borderColor: 'main.darkGreen',
-                  paddingInline: '10px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  flexWrap: 'wrap',
-                }}
-              >
-                {[...Array(4).keys()].map((i) => {
-                  return (
-                    <Skeleton
-                      variant='rounded'
-                      height={40}
-                      width={120}
-                      sx={{ marginRight: '10px' }}
-                    />
-                  );
-                })}
-              </Grid>
-            </>
-          );
-        })}
+      {!terminals && <TerminalLoading />}
     </Grid>
   );
 };

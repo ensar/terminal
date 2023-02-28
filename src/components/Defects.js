@@ -4,6 +4,7 @@ import Body from './Table/Body';
 import Footer from './Table/Footer';
 import { useDefectsContext } from 'contexts/DefectsContext';
 import { useTranslation } from 'react-i18next';
+import DefectListLoading from './Skeletons/DefectListLoading';
 
 const Defects = () => {
   const { defects, setDefects } = useDefectsContext();
@@ -39,6 +40,7 @@ const Defects = () => {
         <Body data={defects} columns={columns} setData={setDefects} />
         <Footer data={defects[0]?.defectList} />
       </Table>
+      {defects.length < 1 && <DefectListLoading />}
     </TableContainer>
   );
 };
