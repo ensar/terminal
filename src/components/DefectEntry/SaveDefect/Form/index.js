@@ -8,7 +8,7 @@ import VirtualKeyboard from 'components/FormItems/VirtualKeyboard';
 
 const Form = ({ setOpen }) => {
   const { pointerCor } = useDefectEntryContext();
-  const { setShow } = useToastContext();
+  const { setToast } = useToastContext();
 
   const formik = useFormik({
     initialValues: {
@@ -25,7 +25,7 @@ const Form = ({ setOpen }) => {
     onSubmit: (values) => {
       console.log(values);
       setOpen(false);
-      setShow(true);
+      setToast(true);
     },
   });
   return (

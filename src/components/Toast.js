@@ -1,30 +1,27 @@
 import { Alert, Snackbar } from '@mui/material';
+import { useToastContext } from 'contexts/ToastContext';
 import { t } from 'i18next';
 
-const Toast = ({
-  show,
-  setShow,
-  severity = 'success',
-  message = t('toastMessages.success'),
-}) => {
+const Toast = () => {
+  const { toast, setToast } = useToastContext();
   const handleClose = () => {
-    setShow(false);
+    setToast(null);
   };
 
   return (
     <Snackbar
-      open={show}
-      autoHideDuration={5000}
+      open={Boolean(toast)}
+      autoHideDuration={3000}
       anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
       onClose={handleClose}
     >
       <Alert
         onClose={handleClose}
         variant='filled'
-        severity={severity}
+        severity={toast?.severity || 'success'}
         sx={{ width: '100%' }}
       >
-        {message}
+        {toast?.message || t('toastMessages.success')}
       </Alert>
     </Snackbar>
   );

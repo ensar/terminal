@@ -15,7 +15,7 @@ import { useState } from 'react';
 import useLazyLoading from 'hooks/useLazyLoading';
 
 const Body = ({ data, columns, setData }) => {
-  const { setShow } = useToastContext();
+  const { setToast } = useToastContext();
   const [defects, setDefects] = useState([]);
 
   const { loader, hasMore } = useLazyLoading(
@@ -30,7 +30,7 @@ const Body = ({ data, columns, setData }) => {
 
   const deleteDefect = (id) => {
     setDefects(defects.filter((d) => d.vinNo !== id));
-    setShow(true);
+    setToast(true);
   };
   return (
     <TableBody>

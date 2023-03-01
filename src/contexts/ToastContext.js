@@ -4,11 +4,11 @@ import { createContext, useContext, useState } from 'react';
 const ToastContext = createContext();
 
 export const ToastProvider = ({ children }) => {
-  const [show, setShow] = useState(false);
+  const [toast, setToast] = useState(null);
 
   return (
-    <ToastContext.Provider value={{ show, setShow }}>
-      <Toast show={show} setShow={setShow} />
+    <ToastContext.Provider value={{ toast, setToast }}>
+      <Toast />
       {children}
     </ToastContext.Provider>
   );
