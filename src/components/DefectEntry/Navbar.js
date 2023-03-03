@@ -4,7 +4,7 @@ import { getHeaderData } from 'services/api';
 import { useDefectEntryContext } from 'contexts/DefectEntryContext';
 import { useTranslation } from 'react-i18next';
 
-const Navbar = () => {
+const Navbar = ({ style }) => {
   const [headerData, setHeaderData] = useState();
   const { t } = useTranslation();
   const { setAssyNo } = useDefectEntryContext();
@@ -29,6 +29,7 @@ const Navbar = () => {
         borderColor: 'main.darkGreen',
         paddingInline: '10px',
         flexWrap: 'wrap',
+        ...style,
       }}
     >
       {headerData && (

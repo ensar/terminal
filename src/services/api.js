@@ -30,3 +30,12 @@ export const getDefectEntryFormData = async () =>
 
 export const getnrReason = async () =>
   getData(process.env.REACT_APP_NRREASON_URL);
+
+export const getLargeFontData = async () =>
+  getData(process.env.REACT_APP_LARGEFONTDATA_URL);
+
+export const getLargeFontDefects = async () =>
+  getData(process.env.REACT_APP_LARGEFONTDEFECTS_URL);
+
+export const getTaktTime = async () =>
+  getData(process.env.REACT_APP_TAKTTIME_URL);
