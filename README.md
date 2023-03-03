@@ -1,3 +1,19 @@
+# CVQS TERMINAL FRONTEND
+## Dependencies
+`react` : A JavaScript library for building user interfaces [reactjs.org](https://reactjs.org/) <br>
+`material ui` : Material UI is a library of React UI components that implements Google's Material Design. [mui.com](https://mui.com/material-ui/getting-started/overview/)<br>
+`formik` : Formik is the world's most popular open source form library for React and React Native. [formik.org](https://formik.org/)<br>
+`yup` : Yup is a schema builder for runtime value parsing and validation. [yup](https://www.npmjs.com/package/yup)<br>
+`i18next` : i18next is an internationalization-framework written in and for JavaScript. [i18next.com](https://www.i18next.com/)<br>
+`axios` : Axios is a promise-based HTTP Client for node.js and the browser. [axios-http.com](https://axios-http.com/docs/intro)<br>
+`react-simple-keyboard` : Virtual Keyboard for React. [link](https://www.npmjs.com/package/react-simple-keyboard)
+
+## Available Languages
+Turkish, English and French
+## Requirements
+`node` v16.13.2 or latest<br>
+`npm` 8.19.2 or latest<br>
+`.env`
 ## Available Scripts
 
 In the project directory, you can run:
@@ -34,33 +50,3 @@ If you aren't satisfied with the build tool and configuration choices, you can `
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
