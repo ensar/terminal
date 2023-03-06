@@ -7,7 +7,7 @@ const Header = ({ columns, extraColumns }) => {
     <TableHead>
       <TableRow sx={{ backgroundColor: '#C6FFC8' }}>
         {columns.map((column, i) => (
-          <TableCell key={i}>{t(`table.${column}`)}</TableCell>
+          <TableCell key={i}>{t(`table.${column.label}`)}</TableCell>
         ))}
         {extraColumns.map((text, i) => {
           return <TableCell key={i}>{text}</TableCell>;
