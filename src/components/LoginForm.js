@@ -6,31 +6,15 @@ import VirtualKeyboard from './FormItems/VirtualKeyboard';
 import Shift from './FormItems/Shift';
 import { useTranslation } from 'react-i18next';
 import { useNavigate, useParams } from 'react-router-dom';
+import { formItems, loginFormInitialValues } from 'constants';
 
 const LoginForm = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const { depCode, filterCode } = useParams();
 
-  const formItems = [
-    { name: 'filter', type: 'select', label: t('form.filterLabel') },
-    { name: 'register', type: 'text', label: t('form.registerLabel') },
-    { name: 'password', type: 'password', label: t('form.passwordLabel') },
-    { name: 'assy', type: 'text', label: t('form.assyLabel') },
-  ];
   const formik = useFormik({
-    initialValues: {
-      filter: '',
-      register: '',
-      password: '',
-      assy: '',
-      shift: {
-        day: new Date().getDate(),
-        month: new Date().getMonth() + 1,
-        year: new Date().getFullYear(),
-        shiftCode: 'B',
-      },
-    },
+    initialValues: loginFormInitialValues,
     validationSchema: loginSchema,
     onSubmit: (values) => {
       console.log(values);

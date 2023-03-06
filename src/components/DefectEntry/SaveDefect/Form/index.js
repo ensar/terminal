@@ -5,23 +5,14 @@ import { useFormik } from 'formik';
 import FormGroup1 from './FormGroup1';
 import FormGroup2 from './FormGroup2';
 import VirtualKeyboard from 'components/FormItems/VirtualKeyboard';
+import { saveDefectFormInitialValues } from 'constants';
 
 const Form = ({ setOpen }) => {
   const { pointerCor } = useDefectEntryContext();
   const { setToast } = useToastContext();
 
   const formik = useFormik({
-    initialValues: {
-      ExitDepartment: '',
-      Explanation: '',
-      AppliedOperation: '',
-      SubResponsible: '',
-      DefectClass: '',
-      DefectResponsibles: '',
-      Harigami: false,
-      nrReason: '',
-      pointerCor: pointerCor,
-    },
+    initialValues: { ...saveDefectFormInitialValues, pointerCor },
     onSubmit: (values) => {
       console.log(values);
       setOpen(false);

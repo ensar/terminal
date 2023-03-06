@@ -1,14 +1,16 @@
 import { Grid, TextField, Typography } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 import SelectFilter from './SelectFilter';
 
 const FormItem = ({ item, formik }) => {
+  const { t } = useTranslation();
   const { name } = item;
 
   return (
     <>
       <Grid item xs={4}>
         <Typography variant='body1' sx={{ color: '#000', fontWeight: 500 }}>
-          {item.label}
+          {t(`form.${item.label}`)}
         </Typography>
       </Grid>
       <Grid item xs={8}>
