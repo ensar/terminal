@@ -7,10 +7,12 @@ import Shift from './FormItems/Shift';
 import { useTranslation } from 'react-i18next';
 import { useNavigate, useParams } from 'react-router-dom';
 import { formItems, loginFormInitialValues } from 'constants';
+import { useLocalStorage } from 'hooks/useLocalStorage';
 
 const LoginForm = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const { set } = useLocalStorage();
   const { depCode, filterCode } = useParams();
 
   const formik = useFormik({
@@ -18,6 +20,7 @@ const LoginForm = () => {
     validationSchema: loginSchema,
     onSubmit: (values) => {
       console.log(values);
+      set('terminalUser', values.register);
       navigate(
         `/terminal/defectentry/${depCode}/${filterCode}/${values.filter}`
       );

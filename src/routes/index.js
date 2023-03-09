@@ -4,6 +4,7 @@ import ErrorPage from 'pages/ErrorPage';
 import TerminalLogin from 'pages/TerminalLogin';
 import DefectList from 'pages/DefectList';
 import DefectEntry from 'pages/DefectEntry';
+import ProtectedRoute from 'components/ProtectedRoute';
 
 export const router = createBrowserRouter([
   {
@@ -18,12 +19,17 @@ export const router = createBrowserRouter([
         element: <TerminalLogin />,
       },
       {
-        path: '/terminal/defects',
-        element: <DefectList />,
-      },
-      {
-        path: '/terminal/defectentry/:depCode/:filterCode/:termId',
-        element: <DefectEntry />,
+        element: <ProtectedRoute />,
+        children: [
+          {
+            path: '/terminal/defects',
+            element: <DefectList />,
+          },
+          {
+            path: '/terminal/defectentry/:depCode/:filterCode/:termId',
+            element: <DefectEntry />,
+          },
+        ],
       },
     ],
   },
