@@ -86,7 +86,8 @@ const Body = ({ data, columns, setData }) => {
               </TableCell>
               <TableCell
                 sx={{
-                  display: 'flex',
+                  display: 'table-cell',
+                  width: '100px',
                   height: '60px',
                   alignItems: 'center',
                   padding: 0,
